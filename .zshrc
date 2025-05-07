@@ -117,8 +117,8 @@ alias dcp="docker compose pull"
 
 # Poetry aliases
 alias prt="poetry run tox"
-alias prtpsc="poetry run tox -- -e pytest-skip-containers"
-alias prtmsc="poetry run tox -- -e migration-skip-containers"
+alias prtpsc="poetry run tox -- -e pytest-skip-container"
+alias prtmsc="poetry run tox -- -e migration-skip-container"
 alias prc="poetry run coverage html --skip-covered && open -a 'Google Chrome' htmlcov/index.html"
 alias prr="poetry run ruff check app/ --fix && poetry run ruff check tests/ --fix && poetry run ruff check alembic/admin/env.py --fix && poetry run ruff check alembic/client/env.py --fix" 
 

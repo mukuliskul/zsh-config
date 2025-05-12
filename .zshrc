@@ -117,10 +117,11 @@ alias dcp="docker compose pull"
 
 # Poetry aliases
 alias prt="poetry run tox"
+alias prr="poetry run ruff check app/ --fix && poetry run ruff check tests/ --fix && poetry run ruff check alembic/admin/env.py --fix && poetry run ruff check alembic/client/env.py --fix" 
+alias prtt="poetry run tox -- -e typeChecker"
 alias prtpsc="poetry run tox -- -e pytest-skip-container"
 alias prtmsc="poetry run tox -- -e migration-skip-container"
 alias prc="poetry run coverage html --skip-covered && open -a 'Google Chrome' htmlcov/index.html"
-alias prr="poetry run ruff check app/ --fix && poetry run ruff check tests/ --fix && poetry run ruff check alembic/admin/env.py --fix && poetry run ruff check alembic/client/env.py --fix" 
 
 # Tmux aliases
 alias tma="tmux attach -t"

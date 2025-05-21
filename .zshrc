@@ -1,5 +1,6 @@
 export PATH="$(brew --prefix python@3.12)/libexec/bin:$PATH"
 export PATH="/Applications/WezTerm.app/Contents/MacOS:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="nvim ~/.zshrc"
@@ -114,6 +115,8 @@ alias awslogin='~/Documents/scripts/aws-docker-login.sh'
 alias dcd="docker compose down -v"
 alias dcu="docker compose up --build -d"
 alias dcp="docker compose pull"
+alias dcdu="docker compose down -v && docker compose up --build -d"
+alias dcdpu="docker compose down -v && docker compose pull && docker compose up --build -d"
 
 # Poetry aliases
 alias prt="poetry run tox"

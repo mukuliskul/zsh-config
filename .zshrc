@@ -127,6 +127,7 @@ alias prr="poetry run ruff check app/ --fix && poetry run ruff check tests/ --fi
 alias prtt="poetry run tox -- -e typeChecker"
 alias prtl="poetry run tox -- -e linter"
 alias prtpsc="poetry run tox -- -e pytest-skip-container"
+alias prtsc="poetry run tox -- -e typeChecker && poetry run tox -- -e linter && poetry run tox -- -e pytest-skip-container"
 alias prtmsc="poetry run tox -- -e migration-skip-container"
 alias prc="poetry run coverage html --skip-covered && open -a 'Google Chrome' htmlcov/index.html"
 

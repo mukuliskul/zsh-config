@@ -123,7 +123,7 @@ alias dcdpu='docker compose down -v && (docker compose pull || true) && docker c
 
 # Poetry aliases
 alias prt="poetry run tox"
-alias prr="poetry run ruff check app/ --fix && poetry run ruff check tests/ --fix && poetry run ruff check alembic/admin/env.py --fix && poetry run ruff check alembic/client/env.py --fix" 
+alias prr="poetry run ruff check app/ --fix && poetry run ruff check tests/ --fix && poetry run ruff check migrations/alembic/admin/env.py --fix && poetry run ruff check migrations/alembic/client/env.py --fix" 
 alias prtt="poetry run tox -- -e typeChecker"
 alias prtl="poetry run tox -- -e linter"
 alias prtpsc="poetry run tox -- -e pytest-skip-container"
